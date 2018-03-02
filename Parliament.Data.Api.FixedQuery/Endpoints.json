@@ -748,6 +748,12 @@
         "person_id": "instanceUri"
       }
     },
+    "person_roles": {
+      "type": "list",
+      "parameters": {
+        "person_id": "instanceUri"
+      }
+    },
     "person_by_id_mock": {
       "type": "single",
       "parameters": {

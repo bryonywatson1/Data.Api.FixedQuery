@@ -3,6 +3,8 @@ PREFIX : @schemaUri
 CONSTRUCT {
  ?askingPerson
      a :Person ;
+     <http://example.com/F31CBD81AD8343898B49DC65743F0BDF> ?displayAs ;
+     <http://example.com/D79B0BAC513C4A9A87C9D5AFF1FC632F> ?fullTitle ;
      :personGivenName ?askingPersonGivenName ;
      :personOtherNames ?askingPersonOtherNames ;
      :personFamilyName ?askingPersonFamilyName ;
@@ -34,6 +36,9 @@ WHERE {
        OPTIONAL { ?askingPerson :personGivenName ?askingPersonGivenName . }
        OPTIONAL { ?askingPerson :personFamilyName ?askingPersonFamilyName . }
        OPTIONAL { ?askingPerson :personOtherNames ?askingPersonOtherNames . }
+       OPTIONAL { ?askingPerson <http://example.com/F31CBD81AD8343898B49DC65743F0BDF> ?displayAs . }
+       OPTIONAL { ?askingPerson <http://example.com/A5EE13ABE03C4D3A8F1A274F57097B6C> ?listAs . }
+
        OPTIONAL {
                ?askingPerson :memberHasMemberImage ?askingMemberImage .
                ?askingMemberImage a :MemberImage .
